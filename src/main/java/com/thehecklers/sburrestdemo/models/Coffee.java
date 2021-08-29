@@ -1,5 +1,7 @@
 package com.thehecklers.sburrestdemo.models;
 
+import java.util.UUID;
+
 public class Coffee {
 
     private final String id;
@@ -9,6 +11,11 @@ public class Coffee {
         this.id = id;
         this.name = name;
     }
+
+    public Coffee(String name){
+        this(UUID.randomUUID().toString(), name);
+    }
+
 
     public String getId() {
         return id;
